@@ -20,6 +20,7 @@ These instructions will get you a copy of the project up and running on your loc
 * The first annotation is `PhoneNumber` for the `phoneNumber` field in the `User` object.
 * The second annotation is `PasswordConfirmation` and it is a class level validation annotation for the fields `password` & `confirmPassword` in the `User` object.
 * For rendering the class level error messages in thymeleaf we use `th:if="${#fields.hasErrors('global')}"` instead of `th:if="${#fields.hasErrors('fieldName')}"` as this is not a field error from spring `BindingResult`. 
+* Another note is that we added the annotation `EmailConfirmation` without overriding the `initialize` method as the second annotation & it works also as expected.
 
 ### Acknowledgments
 These are the articles that helped me complete this application:
